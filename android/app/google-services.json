@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "585045173412",
+    "project_id": "cooking-book-bc546",
+    "storage_bucket": "cooking-book-bc546.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:585045173412:android:f3b58a5dcc64444dca7231",
+        "android_client_info": {
+          "package_name": "com.makarov.cooking_book"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "585045173412-3a2neelantcfpt15avefi64j4eqomguh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJD7W4FoPqLabEfmT-nK9MDwQITqcgaKI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "585045173412-3a2neelantcfpt15avefi64j4eqomguh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

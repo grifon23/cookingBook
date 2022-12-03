@@ -24,22 +24,19 @@ class LoginForm extends StatelessWidget {
                 ScaffoldMessenger.of(context)
                     .showSnackBar(SnackBar(content: Text('You are signed in')));
                 // navigation to screen
-
               },
               onFailure: (context, state) {
                 LoadingDialog.hide(context);
-
                 ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(content: Text('Unknown error server. Try again')));
+                    SnackBar(content: Text(state.failureResponse!)));
               },
               child: Container(
-                padding: EdgeInsets.symmetric(horizontal:25.0),
+                padding: EdgeInsets.symmetric(horizontal: 25.0),
                 child: Column(
-
                   children: [
-                    TextFieldBlocBuilder(textFieldBloc: loginBlocForm.email,
+                    TextFieldBlocBuilder(
+                      textFieldBloc: loginBlocForm.email,
                       keyboardType: TextInputType.emailAddress,
-
                       decoration: InputDecoration(
                         prefixIcon: Icon(
                           Icons.email_outlined,
@@ -71,7 +68,8 @@ class LoginForm extends StatelessWidget {
                         label: Text('Email'),
                       ),
                     ),
-                    TextFieldBlocBuilder(textFieldBloc: loginBlocForm.password,
+                    TextFieldBlocBuilder(
+                      textFieldBloc: loginBlocForm.password,
                       obscureText: true,
                       decoration: InputDecoration(
                         prefixIcon: Icon(
@@ -106,22 +104,18 @@ class LoginForm extends StatelessWidget {
                     ),
                     ElevatedButton(
                       onPressed: () => loginBlocForm.submit(),
-
                       child: Center(
-
                           child: Text(
-                            'Sign In',
-                            style: TextStyle(
-
-                                color: Colors.white,
-                                fontSize: 20,
-                                fontWeight: FontWeight.w500),
-                          )),
+                        'Sign In',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                            fontWeight: FontWeight.w500),
+                      )),
                     ),
                   ],
                 ),
-              )
-            );
+              ));
         },
       ),
     );
@@ -157,4 +151,3 @@ class LoadingDialog extends StatelessWidget {
     );
   }
 }
-
